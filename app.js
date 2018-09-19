@@ -73,3 +73,16 @@ var canBeNull = 12;
 // canBeNull = null; // this gives error - cannot reasign to null
 var canAlsoBeNull;
 canAlsoBeNull = null;
+// Section 4: Typescript and ES6 features
+var variable = "Test";
+console.log(variable);
+variable = "Another val";
+console.log(variable);
+// let allows to reassign values, const cannot be changed -> allows you to crete immutable values
+// Block scope
+function reset() {
+    var variable = null;
+    console.log(variable);
+}
+reset(); // output null
+console.log(variable); // output: Another val
