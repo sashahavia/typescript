@@ -115,3 +115,41 @@ reset() // output null
 
 console.log(variable) // output: Another val
 
+// Arrow functions
+
+
+
+// Section 5
+
+// Using Classes
+class Person {
+    name: string
+    private type: string
+    protected age: number = 34
+
+    constructor(name: string, public username: string) {
+        this.name = name
+    }
+
+    printAge() {
+        console.log(this.age)
+        this.setType("Cool girl")
+    }
+
+    setType(type: string) {
+        this.type = type
+        console.log(this.type)
+    }
+}
+
+const person = new Person("Sasha", "sasha.havia@mail.com")
+
+console.log(person)
+person.printAge()
+// person.setType("Cool girl")
+
+// Inheritance
+// class Max extends Person {
+
+// }
+

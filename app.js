@@ -86,3 +86,29 @@ function reset() {
 }
 reset(); // output null
 console.log(variable); // output: Another val
+// Arrow functions
+// Section 5
+// Using Classes
+var Person = /** @class */ (function () {
+    function Person(name, username) {
+        this.username = username;
+        this.age = 34;
+        this.name = name;
+    }
+    Person.prototype.printAge = function () {
+        console.log(this.age);
+        this.setType("Cool girl");
+    };
+    Person.prototype.setType = function (type) {
+        this.type = type;
+        console.log(this.type);
+    };
+    return Person;
+}());
+var person = new Person("Sasha", "sasha.havia@mail.com");
+console.log(person);
+person.printAge();
+// person.setType("Cool girl")
+// Inheritance
+// class Max extends Person {
+// }
