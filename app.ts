@@ -148,9 +148,9 @@ countdown()
 // REST & SPREAD
 console.log("REST & SPREAD")
 
-const numbers = [1, 10, 99, -5]
+const numbers2 = [1, 10, 99, -5]
 console.log(Math.max(33, 99, 10, -3))
-console.log(Math.max(...numbers))
+console.log(Math.max(...numbers2))
 
 function makeArray(...args: number[]) {
     return args

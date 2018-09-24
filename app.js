@@ -115,9 +115,9 @@ var countdown = function (start) {
 countdown();
 // REST & SPREAD
 console.log("REST & SPREAD");
-var numbers = [1, 10, 99, -5];
+var numbers2 = [1, 10, 99, -5];
 console.log(Math.max(33, 99, 10, -3));
-console.log(Math.max.apply(Math, numbers));
+console.log(Math.max.apply(Math, numbers2));
 function makeArray() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
