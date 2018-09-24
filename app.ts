@@ -116,8 +116,73 @@ reset() // output null
 console.log(variable) // output: Another val
 
 // Arrow functions
+console.log("Arrow Functions")
+const addNumbersRegular = function(number1: number, number2: number): number {
+    return number1 + number2
+}
+console.log(addNumbersRegular(2, 3))
+const addNumbers = (number1: number, number2: number): number => {
+    return number1 + number2
+}
+console.log(addNumbers(5, 5))
+// addNumbers same as addNumbers2
+const addNumbers2 = (number1: number, number2: number): number => number1 + number2
+console.log(addNumbers2(3, 4))
 
+const greet = () => {
+    console.log("Hello")
+}
+greet()
 
+// Default Parameters
+console.log("DEFAULT PARAMETERS")
+const countdown = (start: number = 10): void => {
+    while (start > 0) {
+        start--
+    }
+    console.log("Done", start)
+}
+
+countdown()
+
+// REST & SPREAD
+console.log("REST & SPREAD")
+
+const numbers = [1, 10, 99, -5]
+console.log(Math.max(33, 99, 10, -3))
+console.log(Math.max(...numbers))
+
+function makeArray(...args: number[]) {
+    return args
+}
+
+console.log(makeArray(1, 2, 3, 4))
+
+// DESTRUCTURING
+console.log("DESTRUCTURING")
+const hobbies = ["Cooking", "Sports"]
+console.log(hobbies[0], hobbies[1])
+
+const [hobby1, hobby2] = hobbies
+console.log(hobby1, hobby2)
+
+const userData1 = { username: "Sasha", age: 34 }
+const myUsername = userData1.username
+const myAge = userData1.age
+console.log(myUsername, myAge)
+
+const { username, age } = userData1
+console.log(username, age)
+
+// Template Literals
+console.log("TEMPLATE LITERALS")
+const userName = "Sasha"
+const greeting = "Hello, I'm " + userName
+console.log(greeting)
+
+const greeting2 = `Hello, I'm ${userName}.
+This is cool!`
+console.log(greeting2)
 
 // Section 5
 
